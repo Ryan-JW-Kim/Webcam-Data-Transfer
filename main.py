@@ -4,25 +4,12 @@ from display import Display
 from reader import Reader
 import threading
 
-
 import matplotlib.pyplot as plt
 
-fig, ax = plt.subplots()
+# fig, ax = plt.subplots()
+# plt.show()
 
-fruits = ['apple', 'blueberry', 'cherry', 'orange']
-counts = [40, 100, 30, 55]
-bar_labels = ['red', 'blue', '_red', 'orange']
-bar_colors = ['tab:red', 'tab:blue', 'tab:red', 'tab:orange']
-
-ax.bar(fruits, counts, label=bar_labels, color=bar_colors)
-
-ax.set_ylabel('fruit supply')
-ax.set_title('Fruit supply by kind and color')
-ax.legend(title='Fruit color')
-
-plt.show()
-
-if __name__ != "__main__":
+if __name__ == "__main__":
 
     analytics = Analysis()
     analytics.start_time()
@@ -44,7 +31,6 @@ if __name__ != "__main__":
     # display_thread.start()
     # display.launch()
     obj = display.test()
-    plt.imshow(obj)
 
     # Wait till threads successfull execute
     # read_thread.join()
